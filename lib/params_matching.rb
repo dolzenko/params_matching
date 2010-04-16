@@ -77,13 +77,13 @@
 #     @user = params[:id] && User.find(params[:id])
 #
 # With ParamsMatching you can save 4 keystrokes and remove repeated `params[:id]`
-# incantation
+# incantation (mostly "just because we can", won't use this in team setting)
 #
 #     @user = params(:id, &User.method(:find))
 #
-
-
-
+# Generate standard `controller#action` string
+#
+#     params(:controller, :action) * "#"   # => "users#index"
 module ParamsMatching
   protected
 
